@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>A Collection of Free Movies - MovieLibrary.org</title>
+        <meta name="description" content="Watch Telugu, Tamil, Kannada, Hindi, Malayalam movies uploaded to Youtube and other video sharing sites">
+
+        <link rel="shortcut icon" href="img/icon.png">
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css?v4" rel="stylesheet">
+        <link href="css/awesomplete.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="content" class="container-fluid">
+            <div class="row int-vert-spacer-div"></div>
+            <div class="row int-vert-spacer-div hidden-xs"></div>
+            <div class="row int-vert-spacer-div hidden-xs"></div>
+            <div class="row int-vert-spacer-div hidden-xs"></div>
+            <div class="row">
+                <div class="col-sm-12 col-xs-12 int-align-center">
+                    <span class="int-heading-1"><img src="img/movie-library-logo.png" alt="Free Movie Library"></span>
+                    <div class="int-footnote">explore. watch. share.</div>
+                </div>
+                <div class="col-sm-12 col-xs-12 int-vert-spacer-div"></div>
+                <div class="col-sm-12 col-xs-12 int-align-center">
+                    <form class="form-inline" onsubmit="return false;" id="search_form">
+                        <div class="form-group">
+                            <select class="form-control" name="language" id="language" tabindex="1">
+                                <option value="telugu">Telugu</option>
+                                <option value="tamil">Tamil</option>
+                                <option value="kannada">Kannada</option>
+                                <option value="hindi">Hindi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" type="text" name="search_box" id="search_box" placeholder="Search by hero, heroine, director or movie name" size="60" data-multiple tabindex="2">
+                                <div id="int-search-button" class="input-group-addon" tabindex="3">Search</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-xs-12 int-vert-spacer-div"></div>
+                <div id="top-links" class="col-sm-12 col-xs-12 int-align-center">
+                    <a href="search.html?language=telugu&amp;search_box=">Telugu Movies</a>
+                    <a href="search.html?language=tamil&amp;search_box=">Tamil Movies</a>
+                    <a href="search.html?language=kannada&amp;search_box=">Kannada Movies</a>
+                    <a href="search.html?language=hindi&amp;search_box=">Hindi Movies</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div>
+                <a href="index.html">Home</a> | <a href="suggest_movie.html">Suggest a Movie</a> | <a href="report_issue.html">Report an Issue</a> | <a href="mailto:hello@movielibrary.org">Contact</a> | <a href="disclaimer.html">DISCLAIMER</a>
+            </div>
+            <div>
+                <span class='st_facebook'></span>
+                <span class='st_twitter'></span>
+                <span class='st_pinterest'></span>
+                <span class='st_googleplus'></span>
+                <span class='st_tumblr'></span>
+                <span class='st_yammer'></span>
+                <span class='st_pocket'></span>
+                <span class='st_stumbleupon'></span>
+                <span class='st_buffer'></span>
+                <span class='st_myspace'></span>
+                <span class='st_instapaper'></span>
+                <span class='st_flipboard'></span>
+            </div>
+            <div class="disclaimer">By continuing to use this site you certify that you are 18 years or older.</div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- search functions -->
+        <script src="js/utils.js"></script>
+        <script src="js/awesomplete.min.js"></script>
+        <script src="js/search.js"></script>
+
+        <!-- sharethis code -->
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "2d8a3b15-a617-4815-9211-b1b86ef92253", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    </body>
+</html>

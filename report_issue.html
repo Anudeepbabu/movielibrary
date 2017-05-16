@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Report an Issue - MovieLibrary.org</title>
+
+        <link rel="shortcut icon" href="img/icon.png">
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css?v4" rel="stylesheet">
+        <link href="css/awesomplete.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="col-sm-12 col-xs-12 int-vert-spacer-div"></div>
+            <div class="row">
+                <div class="col-sm-8 col-xs-6">
+                    Help us keep the database clean. Please report issues like a video that is taken down, a missing image or a broken link
+                </div>
+            </div>
+            <div class="row">
+                <div id="form_content" class="col-sm-6 col-xs-12">
+                    <form id="report_issue_form" onsubmit="return false;" method="POST">
+                        <div class="form-group">
+                            <label for="email">Your Email Address</label>
+                            <input type="email" class="form-control" name="entry.905988316" id="entry.905988316" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="issue_type">Type of Issue</label>
+                            <select class="form-control" name="entry.630563555" id="entry.630563555">
+                                <option value="Video Not Working">Video Not Working</option>
+                                <option value="Image Not Loading">Image Not Loading</option>
+                                <option value="Broken Link">Broken Link</option>
+                                <option value="Category Suggestion">Category Suggestion</option>
+                                <option value="Unable to use the Site">Unable to use the Site</option>
+                                <option value="Copyright Infringement">Copyright Infringement</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="issue_details">Details</label>
+                            <textarea class="form-control" name="entry.829285092" id="entry.829285092" rows="3" placeholder="Link for the video, More Details etc."></textarea>
+                        </div>
+                        <span id="form_submit_result"><button type="submit" class="btn btn-primary">Report an Issue</button></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div>
+                <a href="index.html">Home</a> | <a href="suggest_movie.html">Suggest a Movie</a> | <a href="report_issue.html">Report an Issue</a> | <a href="mailto:hello@movielibrary.org">Contact</a> | <a href="disclaimer.html">DISCLAIMER</a>
+            </div>
+            <div>
+                <span class='st_facebook'></span>
+                <span class='st_twitter'></span>
+                <span class='st_pinterest'></span>
+                <span class='st_googleplus'></span>
+                <span class='st_tumblr'></span>
+                <span class='st_yammer'></span>
+                <span class='st_pocket'></span>
+                <span class='st_stumbleupon'></span>
+                <span class='st_buffer'></span>
+                <span class='st_myspace'></span>
+                <span class='st_instapaper'></span>
+                <span class='st_flipboard'></span>
+            </div>
+            <div class="disclaimer">By continuing to use this site you certify that you are 18 years or older.</div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- functions -->
+        <script src="js/utils.js"></script>
+        <script type="text/javascript">
+            $('#report_issue_form').submit(function(){
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSe7x7XKwA7a_aN2WHOye5BUIG9PxAuEvvUxKKYOEWFQ8WvF7Q/formResponse",
+                    type: "POST",
+                    data: $('#report_issue_form').serialize(),
+                    cache: false,
+                    processData: false,
+                    success: function() {
+                        $('#form_submit_result').html('Thank you for bringing this issue to our notice.');
+                    },
+                    error: function() {
+                        $('#form_submit_result').html('Thank you for bringing this issue to our notice.');
+                    },
+                });
+            });
+        </script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-84716300-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- share this code -->
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "2d8a3b15-a617-4815-9211-b1b86ef92253", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Suggest a Movie - MovieLibrary.org</title>
+        <meta name="description" content="Suggest a new movie to be uploaded to the MovieLibrary.org database">
+
+        <link rel="shortcut icon" href="img/icon.png">
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css?v4" rel="stylesheet">
+        <link href="css/awesomplete.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="col-sm-12 col-xs-12 int-vert-spacer-div"></div>
+            <div class="row">
+                <div class="col-sm-8 col-xs-6">
+                    Did not find what you were looking for? Send us a suggestion we will try to add the movie to the database.
+                </div>
+            </div>
+            <div class="row">
+                <div id="form_content" class="col-sm-6 col-xs-12">
+                    <form id="movie_suggestion_form" onsubmit="return false;" method="POST">
+                        <div class="form-group">
+                            <label for="email">Your Email Address</label>
+                            <input type="email" class="form-control" name="entry.761585081" id="entry.761585081" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="movie_name">Name of the Movie</label>
+                            <input type="text" class="form-control" name="entry.1856818006" id="entry.1856818006" placeholder="Movie Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="movie_lang">Language of the Movie</label>
+                            <input type="text" class="form-control" name="entry.1954520318" id="entry.1954520318" placeholder="Movie Language">
+                        </div>
+                        <span id="form_submit_result"><button type="submit" class="btn btn-primary">Send Suggestion</button></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div>
+                <a href="index.html">Home</a> | <a href="suggest_movie.html">Suggest a Movie</a> | <a href="report_issue.html">Report an Issue</a> | <a href="mailto:hello@movielibrary.org">Contact</a> | <a href="disclaimer.html">DISCLAIMER</a>
+            </div>
+            <div>
+                <span class='st_facebook'></span>
+                <span class='st_twitter'></span>
+                <span class='st_pinterest'></span>
+                <span class='st_googleplus'></span>
+                <span class='st_tumblr'></span>
+                <span class='st_yammer'></span>
+                <span class='st_pocket'></span>
+                <span class='st_stumbleupon'></span>
+                <span class='st_buffer'></span>
+                <span class='st_myspace'></span>
+                <span class='st_instapaper'></span>
+                <span class='st_flipboard'></span>
+            </div>
+            <div class="disclaimer">By continuing to use this site you certify that you are 18 years or older.</div>
+        </footer>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- functions -->
+        <script src="js/utils.js"></script>
+        <script type="text/javascript">
+            $('#movie_suggestion_form').submit(function(){
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSd5O2AqSdgvo46iY8iLA_Z3sMJHMNaE0auMZ5WRZmEo0Loe_Q/formResponse",
+                    type: "POST",
+                    data: $('#movie_suggestion_form').serialize(),
+                    cache: false,
+                    processData: false,
+                    success: function() {
+                        $('#form_submit_result').html('Thank you for suggesting a movie.');
+                    },
+                    error: function() {
+                        $('#form_submit_result').html('Thank you for suggesting a movie.');
+                    },
+                });
+            });
+        </script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-84716300-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+
+        <!-- share this code -->
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "2d8a3b15-a617-4815-9211-b1b86ef92253", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    </body>
+</html>
