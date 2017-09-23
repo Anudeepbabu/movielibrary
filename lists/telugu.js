@@ -2814,4 +2814,14 @@ var movies = [{
    "s": ["Yashas", "Meghana Mudhiyan", "Prema"],
    "l": "https://www.youtube.com/embed/L-t0s4sKvWE",
    "t": "http://img.youtube.com/vi/L-t0s4sKvWE/sddefault.jpg"
-}]
+},
+{
+   "n": "Brahmotsavam",
+   "g": ["Action" , "Adventure"],
+   "y": 2017,
+   "d": ["Srikanth Addala"],
+   "s": ["Mahesh Babu", "Kajal Aggarwal", "Samantha", "Pranitha"],
+   "l": "https://www.youtube.com/embed/ZKbydYg8R-E",
+   "t": "http://img.youtube.com/vi/ZKbydYg8R-E/sddefault.jpg"
+}
+]
